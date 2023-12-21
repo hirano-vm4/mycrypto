@@ -1,5 +1,7 @@
 ## mycrypto
 
+日本語の README は REASME(JP).md を確認してください
+
 mycrypto is a command-line tool that allows you to easily access detailed trading data and market transaction information of the entire cryptocurrency market right from your terminal. It enables access to a wide range of data, including real-time price fluctuations, market trends, and vital statistical information for each cryptocurrency.
 
 This tool facilitates quick and efficient information gathering. It supports approximately 2400 different cryptocurrency assets, and you can search for any asset not displayed at the top by using the Ticker search.
@@ -62,17 +64,17 @@ The mycrypto application provides a detailed table view of cryptocurrency data. 
 ### Getting an Overview of the Entire Market
 
 Select Cryptocurrency Market Overview
-![Market Overview](https://gyazo.com/4db495281bd96e70922719f5d8ccd0db)
+![Market Overview](https://gyazo.com/4db495281bd96e70922719f5d8ccd0db/raw)
 
 ### Getting Information on Individual Cryptocurrencies
 
 Select a ticker displayed at the top
-![Individual Cryptocurrencies](https://gyazo.com/c33fec491611f1cca9fa853314abc27a)
+![Individual Cryptocurrencies](https://gyazo.com/c33fec491611f1cca9fa853314abc27a/raw)
 
 ### Searching for Information by Ticker
 
 Select Other (Ticker Search)
-![Ticker Search](https://gyazo.com/6b6750cb606d18ab009624f541f4843a)
+![Ticker Search](https://gyazo.com/6b6750cb606d18ab009624f541f4843a/raw)
 
 ## LICENSE
 

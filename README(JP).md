@@ -71,14 +71,17 @@ mycrypto は、暗号通貨の詳細な取引情報表にして提供します�
 ### 市場全体の概要を取得
 
 `Cryptocurrency Market Overview`を選択
+![市場全体の概要](https://gyazo.com/4db495281bd96e70922719f5d8ccd0db/raw)
 
 ### 個別の暗号資産の情報を取得
 
 トップに表示されるティッカーを選択
+![市場全体の概要](https://gyazo.com/c33fec491611f1cca9fa853314abc27a/raw)
 
 ### ティッカーで検索して情報を取得
 
 `Other (Ticker Search)`を選択
+![ティッカーで検索](https://gyazo.com/6b6750cb606d18ab009624f541f4843a/raw)
 
 ## ライセンス
 

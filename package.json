@@ -1,5 +1,5 @@
 {
-  "name": "mycrypto",
+  "name": "@hirano-vm4/mycrypto",
   "version": "1.0.0",
   "description": "mycrypto is a command-line tool that allows you to easily access detailed trading data and market transaction information of the entire cryptocurrency market right from your terminal.",
   "main": "app.js",

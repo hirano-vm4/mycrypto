@@ -28,7 +28,7 @@ mycrypto をインストールする前に、以下の前提条件がシステ�
 npx を利用して、mycrypto を実行します。
 
 ```javascript
-npx mycrypto
+npx @hirano-vm4/mycrypto
 ```
 
 ## 表示データの説明

@@ -17,7 +17,7 @@ This tool facilitates quick and efficient information gathering. It supports app
 Use npx to run mycrypto:
 
 ```javascript
-npx mycrypto
+npx @hirano-vm4/mycrypto
 ```
 
 ## Prerequisites

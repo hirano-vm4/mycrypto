@@ -1,6 +1,6 @@
 ## mycrypto
 
-日本語の README は REASME(JP).md を確認してください
+日本語の README は README(JP).md を確認してください
 
 mycrypto is a command-line tool that allows you to easily access detailed trading data and market transaction information of the entire cryptocurrency market right from your terminal. It enables access to a wide range of data, including real-time price fluctuations, market trends, and vital statistical information for each cryptocurrency.
 

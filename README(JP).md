@@ -71,14 +71,15 @@ mycrypto は、暗号通貨の詳細な取引情報表にして提供します�
 ### 市場全体の概要を取得
 
 `Cryptocurrency Market Overview`を選択
-![市場全体の概要](https://imgur.com/43U85Nz)
 
 ### 個別の暗号資産の情報を取得
 
 トップに表示されるティッカーを選択
-![市場全体の概要](https://imgur.com/w5BJgtF)
 
 ### ティッカーで検索して情報を取得
 
 `Other (Ticker Search)`を選択
-![ティッカーで検索](https://imgur.com/cLYHEUt)
+
+## ライセンス
+
+このソフトウェアは、MIT ライセンスの下で公開されています。LICENSE.txt を参照してください。

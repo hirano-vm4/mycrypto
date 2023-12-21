@@ -57,6 +57,23 @@ The mycrypto application provides a detailed table view of cryptocurrency data. 
 | Circulating Supply | Total amount of the cryptocurrency currently in circulation            |
 | Total Supply       | Total amount of the cryptocurrency available                           |
 
+## Usage Examples
+
+### Getting an Overview of the Entire Market
+
+Select Cryptocurrency Market Overview
+![Market Overview](https://gyazo.com/4db495281bd96e70922719f5d8ccd0db)
+
+### Getting Information on Individual Cryptocurrencies
+
+Select a ticker displayed at the top
+![Individual Cryptocurrencies](https://gyazo.com/c33fec491611f1cca9fa853314abc27a)
+
+### Searching for Information by Ticker
+
+Select Other (Ticker Search)
+![Ticker Search](https://gyazo.com/6b6750cb606d18ab009624f541f4843a)
+
 ## LICENSE
 
 This software is released under the MIT License, see LICENSE.txt.

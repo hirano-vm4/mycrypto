@@ -12,6 +12,14 @@ This tool facilitates quick and efficient information gathering. It supports app
 - Supports approximately 2,400 cryptocurrency assets (using the [Coinlore](https://www.coinlore.com/ja/cryptocurrency-data-api) API)
 - Ticker search functionality
 
+## How to Use
+
+Use npx to run mycrypto:
+
+```javascript
+npx mycrypto
+```
+
 ## Prerequisites
 
 Before installing mycrypto, ensure that your system meets the following prerequisites:

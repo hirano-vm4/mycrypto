@@ -60,7 +60,7 @@ export class DisplayManager {
       ["Market Cap Rank", "Rank " + response.data.rank],
       [
         "Price",
-        this.formatNumber(response.data.price_usd, "USD", 3) +
+        this.formatNumber(response.data.price_usd, "USD", 10) +
           `/${response.data.symbol}`,
       ],
       ["Price Change(1h)", response.data.percent_change_1h + "%"],
@@ -92,11 +92,11 @@ export class DisplayManager {
       return numericValue.toLocaleString("ja-JP", {
         style: "currency",
         currency: currencyCode,
-        maxFractionDigits: digits,
+        maximumFractionDigits: digits,
       });
     } else {
       return numericValue.toLocaleString("ja-JP", {
-        maxFractionDigits: digits,
+        maximumFractionDigits: digits,
       });
     }
   }

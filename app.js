@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 
 import { CryptoSearchHandler } from "./src/crypto_search_handler.js";
-import { DisplayManager } from "./src/display_manager.js";
+import { CryptoCurrency } from "./src/crypto_currency.js";
 
 async function main() {
   const prompt = new CryptoSearchHandler();
-  const displayManager = new DisplayManager();
+  const cryptoCurrency = new CryptoCurrency();
 
   try {
     const userSelect = await prompt.getCryptoDisplayChoice();
@@ -13,9 +13,9 @@ async function main() {
     const response = await prompt.apiFetcher.getCryptoInfo(id);
 
     if (id === 0) {
-      displayManager.displayMarketOverview(response);
+      cryptoCurrency.displayMarketOverview(response);
     } else {
-      displayManager.displayCurrencyDetails(response);
+      cryptoCurrency.displayCurrencyDetails(response);
     }
   } catch (err) {
     if (err instanceof Error) {
@@ -26,4 +26,4 @@ async function main() {
   }
 }
 
-main();
+await main();

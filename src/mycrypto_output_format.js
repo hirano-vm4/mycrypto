@@ -94,11 +94,11 @@ export class MyCryptoOutputFormat {
         currency: currencyCode,
         maximumFractionDigits: digits,
       });
-    } else {
-      return numericValue.toLocaleString("ja-JP", {
-        maximumFractionDigits: digits,
-      });
     }
+
+    return numericValue.toLocaleString("ja-JP", {
+      maximumFractionDigits: digits,
+    });
   }
 
   titleStyle(text) {

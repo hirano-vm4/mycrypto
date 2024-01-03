@@ -32,20 +32,16 @@ export class CryptoSearchHandler {
   }
 
   async fetchIdForSelectedTicker(userSelect) {
-    let id;
-    let tickerToCheck;
+    let ticker = userSelect;
 
     if (userSelect === "Other (Ticker Search)") {
-      const otherTicker = await this.requestTickerSymbol();
-      tickerToCheck = otherTicker;
-      id = this.tickerToId(otherTicker);
-    } else {
-      tickerToCheck = userSelect;
-      id = this.tickerToId(userSelect);
+      ticker = await this.requestTickerSymbol();
     }
 
+    const id = this.tickerToId(ticker);
+
     if (id === undefined) {
-      throw new Error(`Ticker '${tickerToCheck}' is not supported.`);
+      throw new Error(`Ticker '${ticker}' is not supported.`);
     }
     return id;
   }

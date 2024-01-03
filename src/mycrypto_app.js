@@ -1,10 +1,10 @@
 import { cryptoTickerToIdMap, cryptoChoices } from "../config/constants.js";
-import { ApiFetcher } from "./api_fetcher.js";
+import { CryptoMarketInfo } from "./crypto_market_info.js";
 import enquirer from "enquirer";
 
-export class CryptoSearchHandler {
+export class MyCryptoApp {
   constructor() {
-    this.apiFetcher = new ApiFetcher();
+    this.cryptoMarketInfo = new CryptoMarketInfo();
   }
 
   async getCryptoDisplayChoice() {

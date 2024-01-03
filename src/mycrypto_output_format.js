@@ -1,7 +1,7 @@
 import Table from "cli-table2";
 import colors from "colors";
 
-export class CryptoCurrency {
+export class MyCryptoOutputFormat {
   constructor() {
     this.table = new Table({
       head: ["Market Overview".rainbow.bold, "Value".grey.bold],

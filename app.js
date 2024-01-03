@@ -1,16 +1,16 @@
 #!/usr/bin/env node
 
-import { CryptoSearchHandler } from "./src/crypto_search_handler.js";
-import { CryptoCurrency } from "./src/crypto_currency.js";
+import { MyCryptoApp } from "./src/mycrypto_app.js";
+import { MyCryptoOutputFormat } from "./src/mycrypto_output_format.js";
 
 async function main() {
-  const prompt = new CryptoSearchHandler();
-  const cryptoCurrency = new CryptoCurrency();
+  const prompt = new MyCryptoApp();
+  const cryptoCurrency = new MyCryptoOutputFormat();
 
   try {
     const userSelect = await prompt.getCryptoDisplayChoice();
     const id = await prompt.fetchIdForSelectedTicker(userSelect);
-    const response = await prompt.apiFetcher.getCryptoInfo(id);
+    const response = await prompt.cryptoMarketInfo.getCryptoInfo(id);
 
     if (id === 0) {
       cryptoCurrency.displayMarketOverview(response);

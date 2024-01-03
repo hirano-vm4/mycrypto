@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export class ApiFetcher {
+export class CryptoMarketInfo {
   // APIの取得
   async getCryptoInfo(id) {
     const path = "/api/ticker/";

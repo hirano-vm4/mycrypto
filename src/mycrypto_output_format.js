@@ -2,8 +2,8 @@ import Table from "cli-table2";
 import colors from "colors";
 
 export class MyCryptoOutputFormat {
-  constructor() {
-    this.table = new Table({
+  createTable() {
+    return new Table({
       head: ["Market Overview".rainbow.bold, "Value".grey.bold],
       colWidths: [30, 30],
       chars: {
@@ -27,6 +27,8 @@ export class MyCryptoOutputFormat {
   }
 
   displayMarketOverview(response) {
+    const table = this.createTable();
+
     const marketData = [
       ["Price Checked At", response.time.toLocaleString()],
       ["Total Market Cap", this.formatNumber(response.data.total_mcap, "USD")],
@@ -46,13 +48,15 @@ export class MyCryptoOutputFormat {
     ];
 
     marketData.forEach(([title, value]) => {
-      this.table.push([this.titleStyle(title), this.valueStyle(value)]);
+      table.push([this.titleStyle(title), this.valueStyle(value)]);
     });
 
-    console.log(this.table.toString());
+    console.log(table.toString());
   }
 
   displayCurrencyDetails(response) {
+    const table = this.createTable();
+
     const marketData = [
       ["Price Checked At", response.time.toLocaleString()],
       ["Currency Name", response.data.name],
@@ -79,10 +83,10 @@ export class MyCryptoOutputFormat {
     ];
 
     marketData.forEach(([title, value]) => {
-      this.table.push([this.titleStyle(title), this.valueStyle(value)]);
+      table.push([this.titleStyle(title), this.valueStyle(value)]);
     });
 
-    console.log(this.table.toString());
+    console.log(table.toString());
   }
 
   formatNumber(number, currencyCode = "", digits = 0) {

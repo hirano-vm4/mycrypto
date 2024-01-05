@@ -1,10 +1,10 @@
 import { cryptoTickerToIdMap, cryptoChoices } from "../config/constants.js";
-import { CryptoMarketInfo } from "./crypto_market_info.js";
+import { CryptoMarket } from "./crypto_market.js";
 import enquirer from "enquirer";
 
 export class MyCryptoApp {
   constructor() {
-    this.cryptoMarketInfo = new CryptoMarketInfo();
+    this.cryptoMarket = new CryptoMarket();
   }
 
   async getCryptoDisplayChoice() {

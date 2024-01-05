@@ -10,7 +10,7 @@ async function main() {
   try {
     const userSelect = await prompt.getCryptoDisplayChoice();
     const id = await prompt.fetchIdForSelectedTicker(userSelect);
-    const response = await prompt.cryptoMarketInfo.getCryptoInfo(id);
+    const response = await prompt.cryptoMarket.getCryptoInfo(id);
 
     if (id === 0) {
       cryptoCurrency.displayMarketOverview(response);

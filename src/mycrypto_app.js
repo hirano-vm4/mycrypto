@@ -1,5 +1,7 @@
 import { cryptoTickerToIdMap, cryptoChoices } from "../config/constants.js";
 import { CryptoMarket } from "./crypto_market.js";
+import { MarketOverView } from "./market_overview.js";
+import { CurrencyDetail } from "./currency_detail.js";
 import enquirer from "enquirer";
 
 export class MyCryptoApp {
@@ -7,7 +9,23 @@ export class MyCryptoApp {
     this.cryptoMarket = new CryptoMarket();
   }
 
-  async getCryptoDisplayChoice() {
+  async exec() {
+    try {
+      const ticker = await this.selectCryptoOption();
+      const id = await this.getIdForTicker(ticker);
+      const response = await this.cryptoMarket.getCryptoInfo(id);
+
+      this.displayCryptoInfo(id, response);
+    } catch (err) {
+      if (err instanceof Error) {
+        console.error(err.message);
+      } else {
+        throw err;
+      }
+    }
+  }
+
+  async selectCryptoOption() {
     const answer = await enquirer.prompt([
       {
         type: "select",
@@ -31,7 +49,7 @@ export class MyCryptoApp {
     return response.ticker.toUpperCase();
   }
 
-  async fetchIdForSelectedTicker(userSelect) {
+  async getIdForTicker(userSelect) {
     let ticker = userSelect;
 
     if (userSelect === "Other (Ticker Search)") {
@@ -48,5 +66,15 @@ export class MyCryptoApp {
 
   tickerToId(ticker) {
     return cryptoTickerToIdMap[ticker];
+  }
+
+  displayCryptoInfo(id, response) {
+    if (id === 0) {
+      const marketOverView = new MarketOverView();
+      marketOverView.display(response);
+    } else {
+      const currencyDetail = new CurrencyDetail();
+      currencyDetail.display(response);
+    }
   }
 }
